@@ -22,13 +22,9 @@ namespace SM
 		uint64_t m_widgetBackground;
 		MyGUI::EditBox* m_widgetMessage;
 		MyGUI::EditBox* m_widgetReceivedMessages;
-		MyGUI::UString* m_name;
+		std::string m_name;
 	private:
-		__int64 qword40;
-	public:
-		uint64_t m_nameLength;
-	private:
-		uint64_t qword50;
+
 		bool byte58;
 		uint32_t dword5C;
 		bool byte60;
@@ -48,7 +44,7 @@ namespace SM
 	private:
 		virtual void func0();
 	};
-
+	constexpr auto x = sizeof(ChatGui);
 	static_assert(sizeof(ChatGui) == 0xE0, "ChatGui wrong size");
 }
 
