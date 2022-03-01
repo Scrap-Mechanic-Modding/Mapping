@@ -4,7 +4,7 @@
 namespace SM
 {
 	class LuaVM;
-	
+
 	// TODO: Document vtable stuffs
 	class LuaManager
 	{
@@ -15,14 +15,15 @@ namespace SM
 		uint64_t qword28;
 		uint64_t qword30;
 		uint64_t qword38;
-		uint64_t qword40;
+		uint64_t dword40;
+		uint32_t dword48;
 	public:
 		uint32_t m_scriptId;
 		uint32_t m_scriptRef;
 		uint32_t m_scriptInstanceId;
 		uint8_t m_scriptTypeId;
 	private:
-		_BYTE field_59;
+		uint8_t field_59;
 	public:
 		bool m_bIsServer;
 	private:
