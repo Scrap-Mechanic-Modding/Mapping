@@ -17,12 +17,14 @@ namespace SM
 		uint64_t qword38;
 		uint64_t qword40;
 	public:
-		uint64_t m_scriptId;
-		uint64_t m_scriptRef;
+		uint32_t m_scriptId;
+		uint32_t m_scriptRef;
+		uint32_t m_scriptInstanceId;
+		uint8_t m_scriptTypeId;
 	private:
-		bool bool58;
+		_BYTE field_59;
 	public:
-		bool m_isServer;
+		bool m_bIsServer;
 	private:
 		uint64_t qword60;
 		uint64_t qword68;
