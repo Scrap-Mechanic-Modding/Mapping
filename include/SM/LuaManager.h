@@ -4,6 +4,24 @@
 namespace SM
 {
 	class LuaVM;
+	struct ScriptState
+	{
+	private:
+		uint64_t qword0;
+		uint64_t qword8;
+		uint64_t qword10;
+		uint64_t qword18;
+	public:
+		uint32_t scriptId;
+		uint32_t scriptRef;
+		uint32_t scriptInstanceId;
+		uint8_t scriptTypeId;
+	private:
+		uint8_t gap2D[5];
+	public:
+		bool m_bHasFault;
+	};
+	static_assert(sizeof(ScriptState) == 0x38, "ScriptState wrong size");
 
 	// TODO: Document vtable stuffs
 	class LuaManager
@@ -57,9 +75,9 @@ namespace SM
 		uint64_t qword258;
 		uint64_t qword260;
 		uint64_t qword268;
-		uint64_t qword270;
-		uint64_t qword278;
-		uint64_t qword280;
+	public:
+		std::vector<ScriptState*> m_onFixedUpdateStates;
+	private:
 		uint64_t qword288;
 		uint64_t qword290;
 		uint64_t qword298;
