@@ -3,7 +3,7 @@
 
 namespace SM
 {
-	class PlayState;
+	class PlayStateManager;
 	
   	// TODO: Document vtable stuffs
 	class Contraption
@@ -30,14 +30,14 @@ namespace SM
 		uint64_t qword98;
 		uint64_t qwordA0;
 		BYTE gapA8[248];
-		uint64_t m_PlayStateManager;
+	public:
+		PlayStateManager* m_pPlayStateManager;
+	private:
 		uint64_t qword1A8;
 		uint64_t qword1B0;
 		BYTE byte1B8;
 		uint32_t dword1BC;
-	public:
-		PlayState *m_PlayState;
-	private:
+		uint64_t qword1C0;
 		uint64_t qword1C8;
 		uint64_t qword1D0;
 		uint64_t qword1D8;

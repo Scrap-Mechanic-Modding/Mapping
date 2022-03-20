@@ -24,10 +24,9 @@ namespace SM
 		uint64_t qword78;
 		uint32_t dword80;
 		uint32_t dword84;
-		uint64_t qword88;
-		uint64_t qword90;
-		uint64_t qword98;
-		uint64_t qwordA0;
+	public:
+		std::string m_lastEvent;
+	private:
 		uint64_t qwordA8;
 		uint32_t dwordB0;
 		BYTE gapB4[60];

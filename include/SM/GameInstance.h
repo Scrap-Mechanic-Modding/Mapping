@@ -5,6 +5,7 @@ namespace SM
 {
 	class InGameGuiManager;
 	class LuaManager;
+	class ToolManager;
 
 	// TODO: Document vtable stuffs
 #pragma pack( push, 4 )
@@ -36,7 +37,9 @@ namespace SM
 		uint64_t qword190;
 		uint64_t qword198;
 		uint64_t qword1A0;
-		uint64_t qword1A8;
+	public:
+		ToolManager* m_pToolManager;
+	private:
 		uint64_t qword1B0;
 		uint64_t qword1B8;
 		uint64_t qword1C0;
