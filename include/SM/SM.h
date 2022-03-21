@@ -13,3 +13,14 @@
 #include "PlayState.h"
 #include "Contraption.h"
 #include "LuaVM.h"
+
+
+// Simple global variables / non classes
+namespace SM
+{
+	static bool* IsDeveloperMode()
+	{
+		return reinterpret_cast<bool*>(uintptr_t(GetModuleHandle(NULL)) + 0xE57D65);
+	}
+}
+
