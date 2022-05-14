@@ -7,5 +7,5 @@ else()
   add_compile_options(-Wall -Wextra -Wpedantic -Werror)
 endif()
 
-add_subdirectory("${CMAKE_SOURCE_DIR}/deps")
-add_subdirectory("${CMAKE_SOURCE_DIR}/src/")
+add_subdirectory("deps/")
+add_subdirectory("src/")
